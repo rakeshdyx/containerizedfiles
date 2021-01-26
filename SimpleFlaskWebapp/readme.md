@@ -1,8 +1,8 @@
  
 Python Web App using Flask
-    6  apt-get update
-    8  apt-get install python3
-    9  apt-get install python3-pip
+apt-get update
+apt-get install python3
+apt-get install python3-pip
    10  pip3 install flask
    11  pwd
    12  cd /opt/

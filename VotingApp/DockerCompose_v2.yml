@@ -1,0 +1,34 @@
+version: 2
+service:
+  redis:
+    image: redis
+    networks:
+      - backend
+  db:
+    image: postgres
+    networks:
+      - backend
+  vote:
+    image: rakeshdyx/voting-app
+    port:
+      - 5000:80
+    networks:
+      - forntend
+      - backend
+    
+  result:
+    image: rakeshdyx/result-app
+    port:
+      - 5001:80
+    networks:
+      - forntend
+      - backend
+  worker:
+    image: rakeshdyx/worker
+    networks:
+      - forntend
+      - backend
+
+network:
+  forntend:
+  backend:
