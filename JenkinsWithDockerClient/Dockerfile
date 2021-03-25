@@ -9,4 +9,3 @@ mv /tmp/download/docker/docker* /usr/local/bin/ && \
 groupadd -g 995 docker && \
 usermod -aG wheel,docker jenkins
 
-USER jenkins
